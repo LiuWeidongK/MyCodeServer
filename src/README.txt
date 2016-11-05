@@ -1,0 +1,1 @@
+Client send Json(String) -> teacherServlet -> teacherSolve(解析并添加到TeacherInfo) -> sql_TeacherInfo(添加数据到数据库)
