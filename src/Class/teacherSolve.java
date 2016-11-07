@@ -1,19 +1,17 @@
 package Class;
 
-import DAO.TeacherInfo;
+import DAO.teacherInfo;
 import MySQL.sql_TeacherInfo;
-import org.json.JSONException;
-import org.json.JSONObject;
+import Util.JsonUtil;
 
 public class teacherSolve {
 
-    public void solve(String json) throws JSONException {
+    public void solve(String jsonStr){
 
-        JSONObject jsonObject = new JSONObject(json);
-
-        TeacherInfo info = new TeacherInfo(jsonObject.getString("randNum"),jsonObject.getString("cName"),jsonObject.getString("MAC"));
+        teacherInfo info = JsonUtil.JsonToObject(jsonStr, teacherInfo.class);
 
         sql_TeacherInfo Sql = new sql_TeacherInfo();
+
         Sql.work(info);
     }
 }

@@ -1,6 +1,6 @@
 package MySQL;
 
-import DAO.TeacherInfo;
+import DAO.teacherInfo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class sql_TeacherInfo {
 
-    public void work(TeacherInfo info){
+    public void work(teacherInfo info){
         Connection conn = Jdbc.conn();
         PreparedStatement pstm;
 
@@ -16,7 +16,7 @@ public class sql_TeacherInfo {
 
         try {
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1,info.getRandNumber());
+            pstm.setString(1,info.getRandNum());
             pstm.setString(2,info.getcName());
             pstm.setString(3,info.getMAC());
             pstm.execute();

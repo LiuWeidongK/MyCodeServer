@@ -1,23 +1,23 @@
 package DAO;
 
-public class TeacherInfo {
+public class teacherInfo {
 
-    private String randNumber;
+    private String randNum;
     private String cName;
     private String MAC;
 
-    public TeacherInfo(String randNumber, String cName, String MAC) {
-        this.randNumber = randNumber;
+    public teacherInfo(String randNum, String cName, String MAC) {
+        this.randNum = randNum;
         this.cName = cName;
         this.MAC = MAC;
     }
 
-    public String getRandNumber() {
-        return randNumber;
+    public String getRandNum() {
+        return randNum;
     }
 
-    public void setRandNumber(String randNumber) {
-        this.randNumber = randNumber;
+    public void setRandNum(String randNum) {
+        this.randNum = randNum;
     }
 
     public String getcName() {

@@ -13,4 +13,14 @@
         <servlet-name>teacherServ</servlet-name>
         <url-pattern>/teacherServ</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>studentServ</servlet-name>
+        <servlet-class>Servlet.studentServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>studentServ</servlet-name>
+        <url-pattern>/studentServ</url-pattern>
+    </servlet-mapping>
 </web-app>
