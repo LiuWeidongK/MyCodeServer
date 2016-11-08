@@ -14,9 +14,11 @@ public class studentServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
 
         String jsonStr = request.getParameter("json");
-
+        System.out.print(jsonStr);
         studentSolve solve = new studentSolve();
-        solve.solve(jsonStr);
+        Boolean sign = solve.solve(jsonStr);
+        System.out.print(sign);
+        response.getOutputStream().print(sign?"true":"false");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
