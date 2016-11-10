@@ -1,6 +1,7 @@
 package MySQL;
 
 import DAO.teacherInfo;
+import Util.Jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
