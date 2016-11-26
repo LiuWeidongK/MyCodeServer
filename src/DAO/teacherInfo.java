@@ -1,15 +1,17 @@
 package DAO;
 
 public class teacherInfo {
-
     private String randNum;
     private String cName;
     private String MAC;
+    private String section_1,section_2;
 
-    public teacherInfo(String randNum, String cName, String MAC) {
+    public teacherInfo(String randNum, String cName, String MAC,String section_1, String section_2) {
         this.randNum = randNum;
         this.cName = cName;
         this.MAC = MAC;
+        this.section_1 = section_1;
+        this.section_2 = section_2;
     }
 
     public String getRandNum() {
@@ -34,5 +36,21 @@ public class teacherInfo {
 
     public void setMAC(String MAC) {
         this.MAC = MAC;
+    }
+
+    public String getSection_2() {
+        return section_2;
+    }
+
+    public void setSection_2(String section_2) {
+        this.section_2 = section_2;
+    }
+
+    public String getSection_1() {
+        return section_1;
+    }
+
+    public void setSection_1(String section_1) {
+        this.section_1 = section_1;
     }
 }

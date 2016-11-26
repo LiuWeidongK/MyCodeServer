@@ -3,12 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    
     <servlet>
         <servlet-name>teacherServ</servlet-name>
         <servlet-class>Servlet.teacherServlet</servlet-class>
     </servlet>
-    
     <servlet-mapping>
         <servlet-name>teacherServ</servlet-name>
         <url-pattern>/teacherServ</url-pattern>
@@ -18,10 +16,26 @@
         <servlet-name>studentServ</servlet-name>
         <servlet-class>Servlet.studentServlet</servlet-class>
     </servlet>
-    
     <servlet-mapping>
         <servlet-name>studentServ</servlet-name>
         <url-pattern>/studentServ</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>resultServlet</servlet-name>
+        <servlet-class>Servlet.resultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resultServlet</servlet-name>
+        <url-pattern>/resultServ</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>resWebServlet</servlet-name>
+        <servlet-class>Servlet.resWebServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resWebServlet</servlet-name>
+        <url-pattern>/resWebServ</url-pattern>
+    </servlet-mapping>
 </web-app>
