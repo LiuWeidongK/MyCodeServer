@@ -21,10 +21,8 @@ public class studentServlet extends HttpServlet {
             stringBuilder.append(line);
         }
         String jsonStr = stringBuilder.toString();
-        //System.out.println(jsonStr);
         studentSolve solve = new studentSolve();
         Boolean sign = solve.solve(jsonStr);
-        //System.out.println(sign);
 
         response.getWriter().write(sign?"TRUE":"FALSE");
     }

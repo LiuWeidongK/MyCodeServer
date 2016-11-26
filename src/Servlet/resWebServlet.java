@@ -26,6 +26,7 @@ public class resWebServlet extends HttpServlet {
         }
 
         String keyRand = stringBuilder.toString();*/
+        //该servlet 暂未实现
         String keyRand = request.getParameter("s");
         sql_ResultInfo sql = new sql_ResultInfo();
         resultInfo result = sql.work(keyRand);

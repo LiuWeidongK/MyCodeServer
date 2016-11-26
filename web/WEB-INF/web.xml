@@ -38,4 +38,22 @@
         <servlet-name>resWebServlet</servlet-name>
         <url-pattern>/resWebServ</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TeacherRegServlet</servlet-name>
+        <servlet-class>Servlet.TeacherRegServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherRegServlet</servlet-name>
+        <url-pattern>/teacherRegServ</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StudentRegServlet</servlet-name>
+        <servlet-class>Servlet.StudentRegServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentRegServlet</servlet-name>
+        <url-pattern>/studentRegServ</url-pattern>
+    </servlet-mapping>
 </web-app>
