@@ -35,7 +35,7 @@ public class sql_ResultInfo {
             rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {                              //Close
+        } finally {                              //Close
             try {
                 if(conn!=null)
                     conn.close();

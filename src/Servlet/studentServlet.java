@@ -22,7 +22,7 @@ public class studentServlet extends HttpServlet {
         }
         String jsonStr = stringBuilder.toString();
         studentSolve solve = new studentSolve();
-        Boolean sign = solve.solve(jsonStr);
+        boolean sign = solve.solve(jsonStr);
 
         response.getWriter().write(sign?"TRUE":"FALSE");
     }

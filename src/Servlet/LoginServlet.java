@@ -23,7 +23,9 @@ public class LoginServlet extends HttpServlet {
         String jsonStr = stringBuilder.toString();
 
         sql_Login sql = new sql_Login();
-        sql.work(jsonStr);
+        boolean sign = sql.work(jsonStr);
+
+        response.getWriter().write(sign?"TRUE":"FALSE");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

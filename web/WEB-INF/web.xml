@@ -56,4 +56,13 @@
         <servlet-name>StudentRegServlet</servlet-name>
         <url-pattern>/studentRegServ</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServ</url-pattern>
+    </servlet-mapping>
 </web-app>
