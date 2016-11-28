@@ -23,7 +23,9 @@ public class TeacherRegServlet extends HttpServlet {
         String jsonStr = stringBuilder.toString();
 
         regTeacher reg = new regTeacher();
-        reg.solve(jsonStr);
+        boolean sign = reg.solve(jsonStr);
+
+        response.getWriter().write(sign?"TRUE":"FALSE");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

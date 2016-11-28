@@ -4,9 +4,9 @@ import DAO.RegistTeacherInfo;
 import Util.JsonUtil;
 import MySQL.sql_RegTeacher;
 public class regTeacher {
-    public void solve(String jsonStr) {
+    public boolean solve(String jsonStr) {
         RegistTeacherInfo registTeacherInfo = JsonUtil.JsonToObject(jsonStr,RegistTeacherInfo.class);
         sql_RegTeacher sql = new sql_RegTeacher();
-        sql.work(registTeacherInfo);
+        return sql.work(registTeacherInfo);
     }
 }

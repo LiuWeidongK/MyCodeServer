@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class sql_RegTeacher {
-    public void work(RegistTeacherInfo regT) {
+    public boolean work(RegistTeacherInfo regT) {
         Connection conn = Jdbc.conn();
         PreparedStatement pstm = null;
 
@@ -16,25 +16,27 @@ public class sql_RegTeacher {
 
         try {
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1,regT.getUsername());
-            pstm.setString(2,regT.getPassword());
+            pstm.setString(1, regT.getUsername());
+            pstm.setString(2, regT.getPassword());
             pstm.execute();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {                 //Close
             try {
-                if(conn!=null)
+                if (conn != null)
                     conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
 
             try {
-                if(pstm!=null)
+                if (pstm != null)
                     pstm.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
+        return false;
     }
 }

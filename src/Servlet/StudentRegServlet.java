@@ -13,6 +13,7 @@ import Class.regStudent;
 public class StudentRegServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");      //here
 
         BufferedReader bufferedReader = request.getReader();
         String line;
@@ -23,7 +24,9 @@ public class StudentRegServlet extends HttpServlet {
         String jsonStr = stringBuilder.toString();
 
         regStudent regS = new regStudent();
-        regS.solve(jsonStr);
+        boolean sign = regS.solve(jsonStr);
+
+        response.getWriter().write(sign?"TRUE":"FALSE");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
